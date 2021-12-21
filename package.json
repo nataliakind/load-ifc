@@ -1,0 +1,30 @@
+{
+  "name": "IFC_BASICS_NEU",
+  "version": "1.0.0",
+  "description": "Visualisieren und Konvertieren von IFC-Dateien",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.134.0",
+    "web-ifc": "0.0.28",
+    "web-ifc-viewer": "^1.0.114"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.1.1",
+    "rollup": "^2.61.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nataliakind/IFC_BASICS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nataliakind/IFC_BASICS/issues"
+  },
+  "homepage": "https://github.com/nataliakind/IFC_BASICS#readme"
+}

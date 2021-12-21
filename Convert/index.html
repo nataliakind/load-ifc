@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../../../../favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Konvertieren</title>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            
+            <h1><a href="home.html">IFC-Basics</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="../home.html">Startseite</a></li>
+                    <li><a href="../index.html">Visualisieren</a></li>
+                    <li><a href="./Convert/index.html">Konvertieren</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<div class="file-opener">
+    <a class="invisible" id="save-button">Save JSON</a>
+    <button class="basic-button" id="file-opener-button">Open IFC</button>
+</div>
+<input class="invisible" id="file-input" type="file">
+<div class="general-container">
+    <div class="container" id="left-container"></div>
+    <div class="separator"></div>
+    <div class="container" id="right-container"><pre id="json"></pre></div>
+</div>
+<script src="bundle.js"></script>
+</body>
+</html>

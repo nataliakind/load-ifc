@@ -1,0 +1,292 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Oswald', sans-serif;
+    --color1: rgb(2, 68, 73);
+    --color2: #d5dbe7;
+    --color3:  white
+}
+
+/* ---Header---*/
+header{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  background-color: var(--color1);
+  width: 100vw;
+  
+}
+
+.header-container{
+  margin: auto;
+  max-width: 100vw;
+  padding: 0.5rem;
+}
+
+header a{
+  color: var(--color3);
+  text-decoration: none;
+  padding: 0 1.8rem;
+}
+
+h1{
+  display: inline;
+}
+
+nav{
+  float: right;
+  margin: 9px;
+}
+
+header li{
+  display: inline;
+  list-style: none;
+}
+
+/*--- footer ---*/
+  footer{
+  color: var(--color1);
+  background-color: var(--color1);
+  text-align: left;
+  height: 4px;
+  padding: 6rem;
+  }
+
+/*---Viewer ---*/
+
+.app-container{
+display: flex;
+flex-direction: row;
+position: absolute;
+width: 100vw;
+height: 100vh;
+top: 3rem;
+}
+
+.sidebar-left{
+min-width: 20rem;
+height: 100vh;
+border: solid 4px var(--color1);
+}
+
+.button-container{
+background-color: var(--color2);
+display: flex;
+height: 3rem;
+border: solid 0.5px var(--color1);
+}
+
+.button{
+display: flex;
+align-items: center;
+padding: 0  1rem;
+margin: 0.5rem;
+border: solid 2px var(--color1);
+border-radius: 0.2rem;
+user-select: none;
+cursor: pointer;
+transition: background-color 0.2s ease-in-out;
+}
+.button:hover{
+    background-color: var(--color2);
+}
+
+.tree-menu{
+background-color: var(--color2);
+height: calc(50% - 1.5rem);
+border: solid 1px var(--color1);
+overflow-y: auto;
+}
+.property-menu{
+background-color: var(--color2);
+height: calc(50% - 1.5rem);
+border: solid 1px var(--color1);
+overflow-y: auto;
+}
+
+.property-root{
+display: flex;
+flex-direction: row;
+padding: 0.5rem;
+border-bottom: var(--color1);
+}
+
+.property-name{
+    width: 40%;
+}
+.property-value{
+width: 60%;
+text-align: right;
+}
+
+#viewer-container{
+    height: 100vh;
+    width: 100%;
+}
+
+#file-input {
+    visibility: collapse;
+}    
+
+/* Remove default bullets */
+ul, #myUL {
+    list-style-type: none;
+  }
+  
+  /* Remove margins and padding from the parent ul */
+  #myUL {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the caret/arrow */
+  .caret {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+  }
+  
+  /* Create the caret/arrow with a unicode, and style it */
+  .caret::before {
+    content: "\25B6";
+    color: var(--blue3);
+    display: inline-block;
+    margin-right: 6px;
+  }
+  
+  /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+  .caret-down::before {
+    transform: rotate(90deg);
+  }
+  
+  /* Hide the nested list */
+  .nested {
+    display: none;
+    margin-left: 1rem;
+  }
+  
+  /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+  .active {
+    display: block;
+  }
+
+
+    .sidebar-right{
+      min-width: 20rem;
+      height: 100vh;
+      border: solid 4px var(--color1);
+      }
+  
+    .map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background-color: var(--color2);
+      height: calc(50% - 1.5rem);
+      border: solid 1px var(--blue3);
+      overflow-y: auto;
+
+     }
+    
+    .heading {
+      background-color: var(--color2);
+      display: flex;
+      height: 3rem;
+      border: solid 0.5px var(--color1);
+      }
+    
+     .listings {
+      background-color: var(--color2);
+      height: calc(50% - 1.5rem);
+      border: solid 1px var(--color1);
+      overflow-y: auto;
+      }
+      
+      .listings .item {
+        border-bottom: 1px solid var(--color1);
+        padding: 10px;
+        text-decoration: none;
+      }
+      
+      .listings .item:last-child { border-bottom: none; }
+      
+      .listings .item .title {
+        display: block;
+        color: var(--color1);
+        font-weight: 700;
+      }
+      
+      .listings .item .title small { font-weight: 400; }
+      
+      .listings .item.active .title,
+      .listings .item .title:hover { color: var(--color3) }
+      
+      .listings .item.active {
+        background-color: var(--blue2);
+      }
+      
+      ::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+        border-left: 0;
+        background: var(--color1);
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: var(--color3);
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: var(--color1);
+        border-radius: 0;
+      }
+    
+      /* Marker tweaks */
+    .mapboxgl-popup-close-button {
+        display: none;
+      }
+      
+      .mapboxgl-popup-content {
+        font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+        padding: 0;
+        width: 180px;
+      }
+      
+      .mapboxgl-popup-content h3 {
+        background: var(--color2);
+        color:var(--yellow1);
+        margin: 0;
+        padding: 10px;
+        border-radius: 3px 3px 0 0;
+        font-weight: 700;
+        margin-top: -15px;
+      }
+      
+      .mapboxgl-popup-content h4 {
+        margin: 0;
+        padding: 10px;
+        font-weight: 400;
+      }
+      
+      .mapboxgl-popup-content div {
+        padding: 10px;
+      }
+      
+      .mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+        margin-top: 15px;
+      }
+      
+      .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+        border-bottom-color: var(--color1);
+      }
+      .marker {
+        border: none;
+        cursor: pointer;
+        height: 56px;
+        width: 56px;
+        background-image: url(/Resources/marker.png);
+      }
+      .mapboxgl-popup {
+        padding-bottom: 50px;
+      }
